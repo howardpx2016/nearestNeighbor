@@ -51,14 +51,14 @@ double findDistance(vector<double> &object_to_classify, vector<double> &neighbor
         if (find(updated_feature_set.begin(), updated_feature_set.end(), i) != updated_feature_set.end()) {
             // cout << i << ", ";
             double difference = neighbor_to_classify.at(i) - object_to_classify.at(i);
-            s[i] = pow(difference, 2));
+            s[i] = pow(difference, 2);
         }
     }
 
     // for (int i = 0; i < s.size(); i++) {
     //     sum += s.at(i);
     // }
-    sum = reduce(s, s.size());
+    sum = reduce(s, object_to_classify.size());
     // cout << endl;
     distance = sqrt(sum);
     return distance;
