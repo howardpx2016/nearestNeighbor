@@ -10,7 +10,7 @@
 #include "get_time.h"
 using namespace std;
 
-double reduce(double &A, int n) {
+double reduce(int* A, int n) {
   if (n == 1) {
     return A[0];
   }
@@ -44,7 +44,7 @@ void remove_k(vector<int> &v, int k) {
 double findDistance(vector<double> &object_to_classify, vector<double> &neighbor_to_classify, vector<int> &updated_feature_set) {
     double sum = 0;
     double distance = 0;
-    double s[object_to_classify.size()];
+    double* s = new double[object_to_classify.size()];
     //calculate sum
     for (int i = 1; i < object_to_classify.size(); i++) {
         // account for feature i if i is found in updated_feature_set
