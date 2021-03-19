@@ -7,32 +7,37 @@
 #include <cmath>
 using namespace std;
 
-double findDistance(vector<double> object_to_classify, vector<double> neighbor_to_classify, vector<int> set_of_features, int k) {
+double findDistance(vector<double> object_to_classify, vector<double> neighbor_to_classify, vector<int> features_plus_k) {
     double sum = 0;
     double distance = 0;
-    // create new set to include k
-    vector<int> features_plus_k = set_of_features;
-    features_plus_k.push_back(k);
-
-    //test: check features tested
-    cout << "--accounting for feature ";
     
     //calculate sum
     for (int i = 1; i < object_to_classify.size(); i++) {
         // account for feature i if i is found in features_plus_k
         if (find(features_plus_k.begin(), features_plus_k.end(), i) != features_plus_k.end()) {
-            cout << i << ", ";
+            // cout << i << ", ";
             double difference = neighbor_to_classify.at(i) - object_to_classify.at(i);
             sum += pow(difference, 2);
         }
     }
-    cout << endl;
+    // cout << endl;
     distance = sqrt(sum);
     return distance;
 }
 
 double leave_one_out_cross_validation(vector<vector<double>> data, vector<int> set_of_features, int k) {
     int number_correctly_classfied = 0; // keep track of correct classifications
+    // create new set to include k
+    vector<int> features_plus_k = set_of_features;
+    features_plus_k.push_back(k);
+
+    //test: show which features are accounted for
+    cout << "--accounting for feature ";
+    for (int i = 0; i < features_plus_k.size(); i++) {
+        cout << features_plus_k.at(i) << ", ";
+    }
+    cout << endl;
+
     //iterate through each object
     for (int i = 0; i < data.size(); i++) {
         vector<double> object_to_classify = data.at(i); // current object
@@ -44,13 +49,14 @@ double leave_one_out_cross_validation(vector<vector<double>> data, vector<int> s
         
         // test: check if class labels are correct
         // cout << "--Object " << i+1 << " is in class " << label_object_to_classify << endl;
-        
+
         //compare object with each of its neighbors
         for (int n = 0; n < data.size(); n++) {
             if (n != i) {
                 // cout << "--Ask if " << i+1 << " is the nearest neighbor with " << n+1 << endl;
                 vector<double> neighbor_to_classify = data.at(n);
-                double distance = findDistance(object_to_classify, neighbor_to_classify, set_of_features, k); // get distance between object and neighbor
+
+                double distance = findDistance(object_to_classify, neighbor_to_classify, features_plus_k); // get distance between object and neighbor
                 
                 //test: show distance of current neighbor
                 // cout << "--Distance between object " << i+1 << " and " << n+1 << " is " << distance << endl;
