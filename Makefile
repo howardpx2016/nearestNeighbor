@@ -1,5 +1,5 @@
 CC = g++
-CXXFLAGS = -O3 -mcx16 -march=native -std=c++17 -Wall -Wextra -fcilkplus -DCILK -fpic
+CXXFLAGS = -O3 -mcx16 -march=native -std=c++17 -Wall -Wextra -Wno-sign-compare -fcilkplus -DCILK -fpic
 
 all: nearestNeighbor_parallel
 
