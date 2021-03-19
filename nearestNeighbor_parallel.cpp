@@ -1,5 +1,5 @@
-// #include <cilk/cilk.h>
-// #include <cilk/cilk_api.h>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -10,16 +10,16 @@
 #include "get_time.h"
 using namespace std;
 
-// double reduce(vector<double> &v, int size) {
-//     if (size == 1) {
-//         return v.at(0);
-//     }
-//     double L, R;
-//     L = cilk_spawn reduce(v, size / 2);
-//     R = reduce(v + size / 2, size - size / 2);
-//     cilk_sync;
-//     return L + R;
-// }
+double reduce(vector<double> &v, int size) {
+    if (size == 1) {
+        return v.at(0);
+    }
+    double L, R;
+    L = cilk_spawn reduce(v, size / 2);
+    R = reduce(v + size / 2, size - size / 2);
+    cilk_sync;
+    return L + R;
+}
 
 void printFeatureSet(vector<int> &v) {
     cout << "{";
@@ -55,9 +55,10 @@ double findDistance(vector<double> &object_to_classify, vector<double> &neighbor
         }
     }
 
-    for (int i = 0; i < s.size(); i++) {
-        sum += s.at(i);
-    }
+    // for (int i = 0; i < s.size(); i++) {
+    //     sum += s.at(i);
+    // }
+    sum = reduce(s, s.size());
     // cout << endl;
     distance = sqrt(sum);
     return distance;

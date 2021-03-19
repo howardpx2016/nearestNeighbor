@@ -1,9 +1,9 @@
 CC = g++
 CXXFLAGS = -O3 -mcx16 -march=native -std=c++17 -Wall -Wextra -Werror -fcilkplus -DCILK -fpic
 
-all: hw4_2a
+all: nearestNeighbor_parallel
 
-reduce: hw4_2a.cc get_time.h
+reduce: nearestNeighbor_parallel.cpp get_time.h
 	$(CC) $(CXXFLAGS) reduce.cc -o reduce
 
 clean:
