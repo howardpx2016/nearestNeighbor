@@ -46,7 +46,7 @@ double findDistance(vector<double> &object_to_classify, vector<double> &neighbor
     double distance = 0;
     double* s = new double[object_to_classify.size()];
     //calculate sum
-    for (int i = 1; i < object_to_classify.size(); i++) {
+    cilk_for (int i = 1; i < object_to_classify.size(); i++) {
         // account for feature i if i is found in updated_feature_set
         if (find(updated_feature_set.begin(), updated_feature_set.end(), i) != updated_feature_set.end()) {
             // cout << i << ", ";
