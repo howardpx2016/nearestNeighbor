@@ -10,7 +10,7 @@
 #include "get_time.h"
 using namespace std;
 
-double reduce(int* A, int n) {
+double reduce(double &A, int n) {
   if (n == 1) {
     return A[0];
   }
