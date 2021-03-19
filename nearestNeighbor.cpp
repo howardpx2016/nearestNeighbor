@@ -96,7 +96,7 @@ double leave_one_out_cross_validation(vector<vector<double>> data, vector<int> s
     return accuracy;
 }
 
-void featureSearch(vector<vector<double>> data) {
+void forwardFeatureSearch(vector<vector<double>> data) {
     vector<int> current_set_of_features; // start with an empty set of features
     vector<int> best_feature_subset; // keep track of most accurate feature set
     double overall_best_accuracy = 0.0;
@@ -166,7 +166,7 @@ int main() {
     }
     fin.close();
 
-    featureSearch(data);
+    forwardFeatureSearch(data);
     
     // vector<int> featuresetTest = {3, 6, 9, 12, 15};
     // printFeatureSet(featuresetTest);
