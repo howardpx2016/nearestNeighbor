@@ -134,7 +134,7 @@ void forwardFeatureSearch(vector<vector<double>> &data) {
         printFeatureSet(current_set_of_features);
         cout << " was best, accuracy is " << level_best_accuracy*100 << "%" << endl;
     }
-    cout << "\nFinished Search!The best feature subset so is ";
+    cout << "\nFinished Search! The best feature subset so is ";
     printFeatureSet(best_feature_subset);
     cout << " with an accuracy of " << overall_best_accuracy*100 << "%" << endl;
 }

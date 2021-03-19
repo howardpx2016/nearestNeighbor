@@ -1,5 +1,5 @@
-#include <cilk/cilk.h>
-#include <cilk/cilk_api.h>
+// #include <cilk/cilk.h>
+// #include <cilk/cilk_api.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -10,16 +10,16 @@
 #include "get_time.h"
 using namespace std;
 
-double reduce(double* A, int n) {
-  if (n == 1) {
-    return A[0];
-  }
-  double L, R;
-  L = cilk_spawn reduce(A, n / 2);
-  R = reduce(A + n / 2, n - n / 2);
-  cilk_sync;
-  return L + R;
-}
+// double reduce(double* A, int n) {
+//   if (n == 1) {
+//     return A[0];
+//   }
+//   double L, R;
+//   L = cilk_spawn reduce(A, n / 2);
+//   R = reduce(A + n / 2, n - n / 2);
+//   cilk_sync;
+//   return L + R;
+// }
 
 void printFeatureSet(vector<int> &v) {
     cout << "{";
@@ -44,22 +44,17 @@ void remove_k(vector<int> &v, int k) {
 double findDistance(vector<double> &object_to_classify, vector<double> &neighbor_to_classify, vector<int> &updated_feature_set) {
     double sum = 0;
     double distance = 0;
-    double* s = new double[object_to_classify.size()];
+    // double* s = new double[object_to_classify.size()];
     //calculate sum
-    cilk_for (int i = 1; i < object_to_classify.size(); i++) {
+    for (int i = 1; i < object_to_classify.size(); i++) {
         // account for feature i if i is found in updated_feature_set
         if (find(updated_feature_set.begin(), updated_feature_set.end(), i) != updated_feature_set.end()) {
             // cout << i << ", ";
             double difference = neighbor_to_classify.at(i) - object_to_classify.at(i);
-            s[i] = pow(difference, 2);
+            sum += pow(difference, 2);
         }
     }
 
-    // for (int i = 0; i < s.size(); i++) {
-    //     sum += s.at(i);
-    // }
-    sum = reduce(s, object_to_classify.size());
-    // cout << endl;
     distance = sqrt(sum);
     return distance;
 }
