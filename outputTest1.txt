@@ -179,3 +179,318 @@ On level 4 of the search tree
 --accounting for feature 1, 2, 3, 4,
 --3 correct, 2 wrong. Accuracy = 60%
 On level 4, I added feature 4 to current set
+
+---------------------------------------------------------------
+
+On level 1 of the search tree
+--Considering adding feature 1
+--accounting for feature 1, 
+--2 correct, 3 wrong. Accuracy = 40%        
+--Considering adding feature 2
+--accounting for feature 2, 
+--4 correct, 1 wrong. Accuracy = 80%        
+--Considering adding feature 3
+--accounting for feature 3, 
+--4 correct, 1 wrong. Accuracy = 80%        
+--Considering adding feature 4
+--accounting for feature 4, 
+--3 correct, 2 wrong. Accuracy = 60%        
+On level 1, I added feature 2 to current set
+
+On level 2 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 1, 
+--3 correct, 2 wrong. Accuracy = 60%        
+--Considering adding feature 3
+--accounting for feature 2, 3, 
+--4 correct, 1 wrong. Accuracy = 80%        
+--Considering adding feature 4
+--accounting for feature 2, 4, 
+--3 correct, 2 wrong. Accuracy = 60%        
+On level 2, I added feature 3 to current set
+
+On level 3 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 3, 1, 
+--3 correct, 2 wrong. Accuracy = 60%        
+--Considering adding feature 4
+--accounting for feature 2, 3, 4, 
+--3 correct, 2 wrong. Accuracy = 60%        
+On level 3, I added feature 1 to current set
+
+On level 4 of the search tree
+--Considering adding feature 4
+--accounting for feature 2, 3, 1, 4,        
+--3 correct, 2 wrong. Accuracy = 60%        
+On level 4, I added feature 4 to current set
+
+----------------------------------------------------------------------
+
+On level 1 of the search tree
+--Considering adding feature 1
+--accounting for feature 1, 
+--2 correct, 3 wrong. Accuracy = 40%
+--Considering adding feature 2
+--accounting for feature 2, 
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 3
+--accounting for feature 3, 
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 4, 
+--3 correct, 2 wrong. Accuracy = 60%
+On level 1, I added feature 2 to current set: {2}        
+Best feature subset so far is {1, 2} with an accuracy of 
+80%
+
+On level 2 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 1, 
+--3 correct, 2 wrong. Accuracy = 60%
+--Considering adding feature 3
+--accounting for feature 2, 3, 
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 2, 4, 
+--3 correct, 2 wrong. Accuracy = 60%
+On level 2, I added feature 0 to current set: {2, 0}     
+Best feature subset so far is {1, 2} with an accuracy of 
+80%
+
+On level 3 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 0, 1, 
+--3 correct, 2 wrong. Accuracy = 60%
+--Considering adding feature 3
+--accounting for feature 2, 0, 3, 
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 2, 0, 4,
+--3 correct, 2 wrong. Accuracy = 60%
+On level 3, I added feature 0 to current set: {2, 0, 0}  
+Best feature subset so far is {1, 2} with an accuracy of 
+80%
+
+On level 4 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 0, 0, 1,
+--3 correct, 2 wrong. Accuracy = 60%
+--Considering adding feature 3
+--accounting for feature 2, 0, 0, 3,
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 2, 0, 0, 4, 
+--3 correct, 2 wrong. Accuracy = 60%
+On level 4, I added feature 0 to current set: {2, 0, 0, 0}
+Best feature subset so far is {1, 2} with an accuracy of 
+80%
+
+---------------------------------------------------------------------
+
+On level 1 of the search tree       
+--Considering adding feature 1      
+--accounting for feature 1,
+--2 correct, 3 wrong. Accuracy = 40%
+--Considering adding feature 2      
+--accounting for feature 2,
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 3      
+--accounting for feature 3,
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 4,
+--3 correct, 2 wrong. Accuracy = 60%
+On level 1, I added feature 2 to current set, which is now {2}
+The best feature subset so far is {2} with an accuracy of 80%
+
+On level 2 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 1,
+--3 correct, 2 wrong. Accuracy = 60%
+--Considering adding feature 3
+--accounting for feature 2, 3,
+--4 correct, 1 wrong. Accuracy = 80%
+--Considering adding feature 4
+--accounting for feature 2, 4,
+--3 correct, 2 wrong. Accuracy = 60%
+On level 2, I added feature 3 to current set, which is now {2, 3}      
+The best feature subset so far is {2} with an accuracy of 80%
+
+On level 3 of the search tree
+--Considering adding feature 1
+--accounting for feature 2, 3, 1,
+--3 correct, 2 wrong. Accuracy = 60%
+--Considering adding feature 4
+--accounting for feature 2, 3, 4,
+--3 correct, 2 wrong. Accuracy = 60%
+On level 3, I added feature 1 to current set, which is now {2, 3, 1}   
+The best feature subset so far is {2} with an accuracy of 80%
+
+On level 4 of the search tree
+--Considering adding feature 4
+--accounting for feature 2, 3, 1, 4,
+--3 correct, 2 wrong. Accuracy = 60%
+On level 4, I added feature 4 to current set, which is now {2, 3, 1, 4}
+The best feature subset so far is {2} with an accuracy of 80%
+
+------------------------------------------------------------------------------------
+
+On level 1 of the search tree
+       Using features(s) {1} accuracy is 40   
+       Using features(s) {2} accuracy is 80   
+       Using features(s) {3} accuracy is 80   
+       Using features(s) {4} accuracy is 60   
+Feature set {2} was best, accuracy is 80%     
+On level 2 of the search tree
+       Using features(s) {2, 1} accuracy is 60
+       Using features(s) {2, 3} accuracy is 80
+       Using features(s) {2, 4} accuracy is 60
+Feature set {2, 3} was best, accuracy is 80%
+On level 3 of the search tree
+       Using features(s) {2, 3, 1} accuracy is 60
+       Using features(s) {2, 3, 4} accuracy is 60
+Feature set {2, 3, 1} was best, accuracy is 60%
+On level 4 of the search tree
+       Using features(s) {2, 3, 1, 4} accuracy is 60
+Feature set {2, 3, 1, 4} was best, accuracy is 60%
+
+Finished Search!The best feature subset so is {2} with an accuracy of 80%
+
+---------------------------------------------------------------------------------
+
+Begin Search
+On level 1 of the search tree
+       Using features(s) {1} accuracy is 61.6667
+       Using features(s) {2} accuracy is 67.3333
+       Using features(s) {3} accuracy is 66
+       Using features(s) {4} accuracy is 69.3333
+       Using features(s) {5} accuracy is 69.6667
+       Using features(s) {6} accuracy is 64.6667
+       Using features(s) {7} accuracy is 64.6667
+       Using features(s) {8} accuracy is 65
+       Using features(s) {9} accuracy is 68.3333
+       Using features(s) {10} accuracy is 83.3333
+Feature set {10} was best, accuracy is 83.3333%
+On level 2 of the search tree
+       Using features(s) {10, 1} accuracy is 80.6667
+       Using features(s) {10, 2} accuracy is 79
+       Using features(s) {10, 3} accuracy is 81.3333
+       Using features(s) {10, 4} accuracy is 81.6667
+       Using features(s) {10, 5} accuracy is 95.6667
+       Using features(s) {10, 6} accuracy is 80.6667
+       Using features(s) {10, 7} accuracy is 81.3333
+       Using features(s) {10, 8} accuracy is 77.6667
+       Using features(s) {10, 9} accuracy is 81.3333
+Feature set {10, 5} was best, accuracy is 95.6667%
+On level 3 of the search tree
+       Using features(s) {10, 5, 1} accuracy is 89
+       Using features(s) {10, 5, 2} accuracy is 90.6667
+       Using features(s) {10, 5, 3} accuracy is 91
+       Using features(s) {10, 5, 4} accuracy is 89.3333
+       Using features(s) {10, 5, 6} accuracy is 93
+       Using features(s) {10, 5, 7} accuracy is 88
+       Using features(s) {10, 5, 8} accuracy is 90.6667
+       Using features(s) {10, 5, 9} accuracy is 92
+Feature set {10, 5, 6} was best, accuracy is 93%
+On level 4 of the search tree
+       Using features(s) {10, 5, 6, 1} accuracy is 87
+       Using features(s) {10, 5, 6, 2} accuracy is 84
+       Using features(s) {10, 5, 6, 3} accuracy is 87.6667
+       Using features(s) {10, 5, 6, 4} accuracy is 85
+       Using features(s) {10, 5, 6, 7} accuracy is 85.3333
+       Using features(s) {10, 5, 6, 8} accuracy is 89.6667
+       Using features(s) {10, 5, 6, 9} accuracy is 88.3333
+Feature set {10, 5, 6, 8} was best, accuracy is 89.6667%
+On level 5 of the search tree
+       Using features(s) {10, 5, 6, 8, 1} accuracy is 85
+       Using features(s) {10, 5, 6, 8, 2} accuracy is 82
+       Using features(s) {10, 5, 6, 8, 3} accuracy is 82.6667
+       Using features(s) {10, 5, 6, 8, 4} accuracy is 80.3333
+       Using features(s) {10, 5, 6, 8, 7} accuracy is 85.3333
+       Using features(s) {10, 5, 6, 8, 9} accuracy is 83
+Feature set {10, 5, 6, 8, 7} was best, accuracy is 85.3333%
+On level 6 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 1} accuracy is 78.6667
+       Using features(s) {10, 5, 6, 8, 7, 2} accuracy is 78.6667
+       Using features(s) {10, 5, 6, 8, 7, 3} accuracy is 78.3333
+       Using features(s) {10, 5, 6, 8, 7, 4} accuracy is 77.3333
+root@DESKTOP-10J9EA0:/mnt/c/Users/Howard/Desktop/CS170/nearestNeighbor# g++ nearestNeighbor.cpp
+root@DESKTOP-10J9EA0:/mnt/c/Users/Howard/Desktop/CS170/nearestNeighbor# ./a.out
+Begin Search
+On level 1 of the search tree
+       Using features(s) {1} accuracy is 61.6667%
+       Using features(s) {2} accuracy is 67.3333%
+       Using features(s) {3} accuracy is 66%
+       Using features(s) {4} accuracy is 69.3333%
+       Using features(s) {5} accuracy is 69.6667%
+       Using features(s) {6} accuracy is 64.6667%
+       Using features(s) {7} accuracy is 64.6667%
+       Using features(s) {8} accuracy is 65%
+       Using features(s) {9} accuracy is 68.3333%
+       Using features(s) {10} accuracy is 83.3333%
+Feature set {10} was best, accuracy is 83.3333%
+On level 2 of the search tree
+       Using features(s) {10, 1} accuracy is 80.6667%
+       Using features(s) {10, 2} accuracy is 79%
+       Using features(s) {10, 3} accuracy is 81.3333%
+       Using features(s) {10, 4} accuracy is 81.6667%
+       Using features(s) {10, 5} accuracy is 95.6667%
+       Using features(s) {10, 6} accuracy is 80.6667%
+       Using features(s) {10, 7} accuracy is 81.3333%
+       Using features(s) {10, 8} accuracy is 77.6667%
+       Using features(s) {10, 9} accuracy is 81.3333%
+Feature set {10, 5} was best, accuracy is 95.6667%
+On level 3 of the search tree
+       Using features(s) {10, 5, 1} accuracy is 89%
+       Using features(s) {10, 5, 2} accuracy is 90.6667%
+       Using features(s) {10, 5, 3} accuracy is 91%
+       Using features(s) {10, 5, 4} accuracy is 89.3333%
+       Using features(s) {10, 5, 6} accuracy is 93%
+       Using features(s) {10, 5, 7} accuracy is 88%
+       Using features(s) {10, 5, 8} accuracy is 90.6667%
+       Using features(s) {10, 5, 9} accuracy is 92%
+Feature set {10, 5, 6} was best, accuracy is 93%
+On level 4 of the search tree
+       Using features(s) {10, 5, 6, 1} accuracy is 87%
+       Using features(s) {10, 5, 6, 2} accuracy is 84%
+       Using features(s) {10, 5, 6, 3} accuracy is 87.6667%
+       Using features(s) {10, 5, 6, 4} accuracy is 85%
+       Using features(s) {10, 5, 6, 7} accuracy is 85.3333%
+       Using features(s) {10, 5, 6, 8} accuracy is 89.6667%
+       Using features(s) {10, 5, 6, 9} accuracy is 88.3333%
+Feature set {10, 5, 6, 8} was best, accuracy is 89.6667%
+On level 5 of the search tree
+       Using features(s) {10, 5, 6, 8, 1} accuracy is 85%
+       Using features(s) {10, 5, 6, 8, 2} accuracy is 82%
+       Using features(s) {10, 5, 6, 8, 3} accuracy is 82.6667%
+       Using features(s) {10, 5, 6, 8, 4} accuracy is 80.3333%
+       Using features(s) {10, 5, 6, 8, 7} accuracy is 85.3333%
+       Using features(s) {10, 5, 6, 8, 9} accuracy is 83%
+Feature set {10, 5, 6, 8, 7} was best, accuracy is 85.3333%
+On level 6 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 1} accuracy is 78.6667%
+       Using features(s) {10, 5, 6, 8, 7, 2} accuracy is 78.6667%
+       Using features(s) {10, 5, 6, 8, 7, 3} accuracy is 78.3333%
+       Using features(s) {10, 5, 6, 8, 7, 4} accuracy is 77.3333%
+       Using features(s) {10, 5, 6, 8, 7, 9} accuracy is 81.6667%
+Feature set {10, 5, 6, 8, 7, 9} was best, accuracy is 81.6667%
+On level 7 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 9, 1} accuracy is 75.3333%
+       Using features(s) {10, 5, 6, 8, 7, 9, 2} accuracy is 78%
+       Using features(s) {10, 5, 6, 8, 7, 9, 3} accuracy is 77%
+       Using features(s) {10, 5, 6, 8, 7, 9, 4} accuracy is 76.6667%
+Feature set {10, 5, 6, 8, 7, 9, 2} was best, accuracy is 78%
+On level 8 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 1} accuracy is 73%
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 3} accuracy is 75.3333%
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 4} accuracy is 74.6667%
+Feature set {10, 5, 6, 8, 7, 9, 2, 3} was best, accuracy is 75.3333%
+On level 9 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 3, 1} accuracy is 69.6667%
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 3, 4} accuracy is 72.6667%
+Feature set {10, 5, 6, 8, 7, 9, 2, 3, 4} was best, accuracy is 72.6667%
+On level 10 of the search tree
+       Using features(s) {10, 5, 6, 8, 7, 9, 2, 3, 4, 1} accuracy is 71.6667%
+Feature set {10, 5, 6, 8, 7, 9, 2, 3, 4, 1} was best, accuracy is 71.6667%
+
+Finished Search!The best feature subset so is {10, 5} with an accuracy of 95.6667%
