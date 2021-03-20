@@ -4,6 +4,7 @@
         "fstream": "cpp",
         "vector": "cpp",
         "limits": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iosfwd": "cpp"
     }
 }
