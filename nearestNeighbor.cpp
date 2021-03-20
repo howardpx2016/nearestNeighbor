@@ -223,7 +223,7 @@ int main() {
         return 1;
     }
     fin.close();
-
+    
     if (algChoice == 1) {
         timer s;
         forwardFeatureSearch(data);
