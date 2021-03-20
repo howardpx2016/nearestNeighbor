@@ -56,8 +56,8 @@ double leave_one_out_cross_validation(vector<vector<double>> &data, vector<int> 
         remove_k(updated_feature_set, k);
     }
     // print updated_feature_set
-    cout << "       Using features(s) ";
-    printFeatureSet(updated_feature_set);
+    // cout << "       Using features(s) ";
+    // printFeatureSet(updated_feature_set);
 
     //iterate through each object
     for (int i = 0; i < data.size(); i++) {
@@ -93,7 +93,7 @@ double leave_one_out_cross_validation(vector<vector<double>> &data, vector<int> 
     } 
     // print accuracy
     double accuracy = double(number_correctly_classfied) / double(data.size());
-    cout << " accuracy is " << accuracy*100 << "%" << endl;
+    // cout << " accuracy is " << accuracy*100 << "%" << endl;
 
     return accuracy;
 }
